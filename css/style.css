@@ -1,0 +1,79 @@
+.hidden-window {
+      position: absolute;
+      top: 24px;
+      left: 11%;
+      height: 87%;
+      width: 78%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+       .slide-note {
+        width: 100%;
+        transition: 2s;
+        position: absolute;
+        left: 100%;
+        height: auto;
+
+        &.active {
+         transition: .5s;
+         left: 0;
+        }
+       }
+
+     }
+     .arrow-control {
+      background: #3cadd9;
+      width: 60px;
+      height: 60px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+       &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: white;
+        height: 4px;
+        width: 30px;
+
+       }
+       &:before {
+        transform: rotate(-136deg);
+        top: 19px;
+        left: 17px;
+       }
+       &:after {
+        transform: rotate(136deg);
+        top: 39px;
+        left: 17px;
+       }
+     }
+     .arrow-next {
+      right: 30px;
+     }
+     .arrow-previus {
+      left: 30px;
+      transform: rotate(180deg);
+     }
+     .content-bullets {
+      position: absolute;
+      bottom: -40px;
+      left: 49%;
+       span {
+        background: #bbbbbb;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+       }
+       .active {
+        background: white;
+        width: 15px;
+        height: 15px;
+        border: 3px solid #23a1d4;
+        position: relative;
+        top: 2px;
+       }
+     }
+   }
